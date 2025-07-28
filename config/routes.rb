@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   resources :contents, only: %i[index show]
+  resources :favorite_apps, only: %i[index create update]
 end

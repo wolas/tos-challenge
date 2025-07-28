@@ -35,6 +35,9 @@ class ApplicationController < ActionController::API
   end
 
   def authenticate
+    # Used for load tests
+    #return if Rails.env.test? || Rails.env.development?
+
     authenticate_with_http_token { |token, _| @current_user = User.find_by(token: token) } || render_unauthorized
   end
 

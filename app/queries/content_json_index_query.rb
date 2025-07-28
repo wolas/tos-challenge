@@ -28,7 +28,7 @@ class ContentJsonIndexQuery
       SELECT json_build_object(#{json_keys.join(', ')}) AS result;
     SQL
 
-    sanitized_query = ActiveRecord::Base.sanitize_sql_array([ query, { market: @market } ])
+    sanitized_query = ActiveRecord::Base.sanitize_sql_array([ query, { market: Array(@market) } ])
     result = ActiveRecord::Base.connection.select_one(sanitized_query)
     JSON.parse(result["result"])
   end
@@ -53,7 +53,7 @@ class ContentJsonIndexQuery
               FROM availabilities av
               JOIN apps a ON av.app_id = a.id
               WHERE av.content_id = c.id
-                AND av.market = :market
+                AND av.market IN (:market)
             )
           ) AS movie_json
         FROM contents c
@@ -62,7 +62,7 @@ class ContentJsonIndexQuery
             SELECT 1
             FROM availabilities av
             WHERE av.content_id = c.id
-              AND av.market = :market
+              AND av.market IN (:market)
           )
       )
     SQL
@@ -76,7 +76,6 @@ class ContentJsonIndexQuery
           json_build_object(
             'original_title', c.original_title,
             'year', c.year,
-            'duration_in_seconds', c.duration_in_seconds,
             'type', c.type,
             'availabilities', (
               SELECT json_agg(
@@ -88,7 +87,7 @@ class ContentJsonIndexQuery
               FROM availabilities av
               JOIN apps a ON av.app_id = a.id
               WHERE av.content_id = c.id
-                AND av.market = :market
+                AND av.market IN (:market)
             ),
             'seasons', COALESCE((
               SELECT json_agg(
@@ -96,7 +95,6 @@ class ContentJsonIndexQuery
                   'original_title', s.original_title,
                   'number', s.season_number,
                   'year', s.year,
-                  'duration_in_seconds', s.duration_in_seconds,
                   'type', s.type,
                   'availabilities', (
                     SELECT json_agg(
@@ -108,7 +106,7 @@ class ContentJsonIndexQuery
                     FROM availabilities av2
                     JOIN apps a2 ON av2.app_id = a2.id
                     WHERE av2.content_id = s.id
-                      AND av2.market = :market
+                      AND av2.market IN (:market)
                   )
                 )
               )
@@ -119,7 +117,7 @@ class ContentJsonIndexQuery
                   SELECT 1
                   FROM availabilities av2
                   WHERE av2.content_id = s.id
-                    AND av2.market = :market
+                    AND av2.market IN (:market)
                 )
             ), '[]'::json),
             'episodes', COALESCE((
@@ -146,7 +144,7 @@ class ContentJsonIndexQuery
             SELECT 1
             FROM availabilities av
             WHERE av.content_id = c.id
-              AND av.market = :market
+              AND av.market IN (:market)
           )
       )
     SQL
@@ -171,7 +169,7 @@ class ContentJsonIndexQuery
               FROM availabilities av
               JOIN apps a ON av.app_id = a.id
               WHERE av.content_id = c.id
-                AND av.market = :market
+                AND av.market IN (:market)
             ),
             'channel_programs', COALESCE((
               SELECT json_agg(
@@ -188,7 +186,7 @@ class ContentJsonIndexQuery
                     FROM availabilities av2
                     JOIN apps a2 ON av2.app_id = a2.id
                     WHERE av2.content_id = cp.id
-                      AND av2.market = :market
+                      AND av2.market IN (:market)
                   )
                 )
               )
@@ -199,7 +197,7 @@ class ContentJsonIndexQuery
                   SELECT 1
                   FROM availabilities av2
                   WHERE av2.content_id = cp.id
-                    AND av2.market = :market
+                    AND av2.market IN (:market)
                 )
             ), '[]'::json)
           ) AS channel_json
@@ -209,7 +207,7 @@ class ContentJsonIndexQuery
             SELECT 1
             FROM availabilities av
             WHERE av.content_id = c.id
-              AND av.market = :market
+              AND av.market IN (:market)
           )
       )
     SQL

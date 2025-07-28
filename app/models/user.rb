@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many :user_apps
+  has_many :apps, through: :user_apps
+
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
 

@@ -49,23 +49,6 @@ test-load:
 	sleep 3
 	RAILS_ENV=test bundle exec rails db:drop
 
-# Run load test with warm cache
-.PHONY: warm-test-load
-warm-test-load:
-	RAILS_ENV=test bundle install
-	RAILS_ENV=test bundle exec rails db:create
-	RAILS_ENV=test bundle exec rails db:migrate
-	RAILS_ENV=test SAMPLE_DATA=$(SAMPLE_DATA)  bundle exec rails db:seed
-	RAILS_ENV=test bundle exec rails runner bin/warm_cache.rb
-	RAILS_ENV=test bundle exec rails server &
-	sleep 3
-	clear
-	k6 run spec/load/requests_test.js
-	sleep 3
-	pkill -f 'puma'
-	sleep 3
-	RAILS_ENV=test bundle exec rails db:drop
-
 # Run RSpec tests
 .PHONY: seed
 seed:
@@ -126,7 +109,6 @@ help:
 	@echo "  run         	- Start Rails server"
 	@echo "  test        	- Run tests"
 	@echo "  test-load   	- Runs load test (SAMPLE_DATA number of events)"
-	@echo "  warm-test-load - Warms cache then runs load test (SAMPLE_DATA number of events)"
 	@echo "  seed   	 	- Generate seed data (SAMPLE_DATA number of events)"
 	@echo "  clean       	- Remove temporary files and logs"
 	@echo "  console     	- Start Rails console"
