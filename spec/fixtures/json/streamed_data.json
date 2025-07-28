@@ -1,0 +1,386 @@
+{
+  "movies": [
+    {
+      "original_title": "Star Wars: Episode V - The Empire Strikes Back",
+      "year": 1980,
+      "duration_in_seconds": 7440,
+      "type": "movie",
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "gb"
+        },
+        {
+          "app": "prime_video",
+          "market": "es"
+        }
+      ]
+    },
+    {
+      "original_title": "The Godfather",
+      "year": 1972,
+      "duration_in_seconds": 10500,
+      "type": "movie",
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "es"
+        },
+        {
+          "app": "prime_video",
+          "market": "gb"
+        }
+      ]
+    },
+    {
+      "original_title": "Pulp Fiction",
+      "year": 1994,
+      "duration_in_seconds": 9900,
+      "type": "movie",
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "gb"
+        },
+        {
+          "app": "prime_video",
+          "market": "es"
+        }
+      ]
+    },
+    {
+      "original_title": "Interstellar",
+      "year": 2014,
+      "duration_in_seconds": 10140,
+      "type": "movie",
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "gb"
+        },
+        {
+          "app": "prime_video",
+          "market": "gb"
+        }
+      ]
+    }
+  ],
+  "tv_shows": [
+    {
+      "original_title": "Kimetsu No Yaiba: Demon Slayer",
+      "year": 2019,
+      "duration_in_seconds": null,
+      "type": "tv_show",
+      "seasons": [
+        {
+          "original_title": "Tanjiro Kamado, Unwavering Resolve Arc",
+          "number": 1,
+          "year": 2019,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            },
+            {
+              "app": "prime_video",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Demon Slayer: Kimetsu no Yaiba - Mugen Train Arc/Entertainment District Arc",
+          "number": 2,
+          "year": 2022,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            },
+            {
+              "app": "prime_video",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Demon Slayer: Kimetsu no Yaiba - Swordsmith Village Arc",
+          "number": 3,
+          "year": 2023,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            },
+            {
+              "app": "prime_video",
+              "market": "gb"
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "original_title": "Cruelty",
+          "number": 1,
+          "season_number": 1,
+          "year": 2019,
+          "duration_in_seconds": 3600
+        },
+        {
+          "original_title": "Flame Hashira Kyojuro Rengoku",
+          "number": 1,
+          "season_number": 2,
+          "year": 2022,
+          "duration_in_seconds": 3600
+        },
+        {
+          "original_title": "Someone's Dream",
+          "number": 1,
+          "season_number": 3,
+          "year": 2023,
+          "duration_in_seconds": 3600
+        }
+      ],
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "gb"
+        },
+        {
+          "app": "prime_video",
+          "market": "gb"
+        }
+      ]
+    },
+    {
+      "original_title": "Stranger Things",
+      "year": 2016,
+      "duration_in_seconds": null,
+      "type": "tv_show",
+      "seasons": [
+        {
+          "original_title": "Season 1",
+          "number": 1,
+          "year": 2016,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Season 2",
+          "number": 2,
+          "year": 2017,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Season 3",
+          "number": 3,
+          "year": 2019,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Season 4",
+          "number": 4,
+          "year": 2022,
+          "duration_in_seconds": null,
+          "availabilities": [
+            {
+              "app": "netflix",
+              "market": "gb"
+            },
+            {
+              "app": "prime_video",
+              "market": "gb"
+            }
+          ]
+        }
+      ],
+      "episodes": [
+        {
+          "original_title": "Chapter One: The Vanishing of Will Byers",
+          "number": 1,
+          "season_number": 1,
+          "year": 2016,
+          "duration_in_seconds": 3600
+        },
+        {
+          "original_title": "Chapter One: MADMAX",
+          "number": 1,
+          "season_number": 2,
+          "year": 2017,
+          "duration_in_seconds": 3600
+        },
+        {
+          "original_title": "Chapter One: Suzie, Do You Copy?",
+          "number": 1,
+          "season_number": 3,
+          "year": 2019,
+          "duration_in_seconds": 3600
+        },
+        {
+          "original_title": "Chapter One: The Hellfire Club",
+          "number": 1,
+          "season_number": 4,
+          "year": 2022,
+          "duration_in_seconds": 3600
+        }
+      ],
+      "availabilities": [
+        {
+          "app": "netflix",
+          "market": "gb"
+        },
+        {
+          "app": "prime_video",
+          "market": "gb"
+        }
+      ]
+    }
+  ],
+  "channels": [
+    {
+      "original_title": "Nickelodeon",
+      "year": null,
+      "duration_in_seconds": null,
+      "type": "channel",
+      "availabilities": [
+        {
+          "app": "Amagi",
+          "market": "gb",
+          "stream_info": {
+            "url": "https://www.example.com"
+          }
+        },
+        {
+          "app": "Amagi",
+          "market": "es",
+          "stream_info": {
+            "url": "https://www.example.com/es"
+          }
+        },
+        {
+          "app": "Wurl",
+          "market": "gb",
+          "stream_info": {
+            "url": "https://www.example.com"
+          }
+        }
+      ],
+      "channel_programs": [
+        {
+          "original_title": "SpongeBob",
+          "year": null,
+          "duration_in_seconds": null,
+          "type": "channel_program",
+          "schedule": [
+            {
+              "start_time": "2024-03-11 08:00:00",
+              "end_time": "2024-03-11 09:00:00"
+            },
+            {
+              "start_time": "2024-03-11 09:00:00",
+              "end_time": "2024-03-11 10:00:00"
+            }
+          ],
+          "availabilities": [
+            {
+              "app": "Amagi",
+              "market": "gb"
+            },
+            {
+              "app": "Wurl",
+              "market": "gb"
+            }
+          ]
+        },
+        {
+          "original_title": "Hey Arnold!",
+          "year": null,
+          "duration_in_seconds": null,
+          "type": "channel_program",
+          "schedule": [
+            {
+              "start_time": "2024-03-11 10:00:00",
+              "end_time": "2024-03-11 11:00:00"
+            },
+            {
+              "start_time": "2024-03-11 15:00:00",
+              "end_time": "2024-03-11 16:00:00"
+            }
+          ],
+          "availabilities": [
+            {
+              "app": "Amagi",
+              "market": "es"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "original_title": "Euronews",
+      "year": null,
+      "duration_in_seconds": null,
+      "type": "channel",
+      "availabilities": [
+        {
+          "app": "Amagi",
+          "market": "gb",
+          "stream_info": {
+            "url": "https://www.example.com"
+          }
+        },
+        {
+          "app": "Wurl",
+          "market": "gb",
+          "stream_info": {
+            "url": "https://www.example.com"
+          }
+        }
+      ],
+      "channel_programs": [
+        {
+          "original_title": "News 24hr",
+          "year": null,
+          "duration_in_seconds": null,
+          "type": "channel_program",
+          "schedule": [
+            {
+              "start_time": "2024-03-11 06:00:00",
+              "end_time": "2024-03-12 05:59:59"
+            }
+          ],
+          "availabilities": [
+            {
+              "app": "Amagi",
+              "market": "gb"
+            },
+            {
+              "app": "Wurl",
+              "market": "gb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
